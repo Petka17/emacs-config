@@ -11,3 +11,6 @@ inspired by [System Crafters](https://odysee.com/@SystemCrafters) series
 1. [Emacs From Scratch #3 - Key Bindings and Evil](https://odysee.com/@SystemCrafters/emacs-from-scratch-2-adding-helpful-ui)  
 [Notes](https://systemcrafters.net/emacs-from-scratch/key-bindings-and-evil/)  
 Skipped: [Hydra](https://github.com/abo-abo/hydra) and [General](https://github.com/noctuid/general.el#general-examples)
+1. [Emacs From Scratch #4 - Projectile and Magit](https://odysee.com/@SystemCrafters:e/emacs-from-scratch-4-projectile-and:c)  
+[Notes](https://systemcrafters.net/emacs-from-scratch/projectile-and-magit/)  
+Setup forge
