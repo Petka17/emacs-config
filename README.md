@@ -14,3 +14,5 @@ Skipped: [Hydra](https://github.com/abo-abo/hydra) and [General](https://github.
 1. [Emacs From Scratch #4 - Projectile and Magit](https://odysee.com/@SystemCrafters:e/emacs-from-scratch-4-projectile-and:c)  
 [Notes](https://systemcrafters.net/emacs-from-scratch/projectile-and-magit/)  
 Setup forge
+1. [Emacs From Scratch #5 - Org Mode Basics](https://odysee.com/@SystemCrafters:e/emacs-from-scratch-5-org-mode-basics)  
+[Notes](https://systemcrafters.net/emacs-from-scratch/org-mode-basics/)

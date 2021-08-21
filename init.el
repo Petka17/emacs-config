@@ -48,6 +48,7 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
+(setq truncate-lines t)
 (setq display-line-numbers 'relative)
 (column-number-mode)
 (global-display-line-numbers-mode t)
@@ -180,3 +181,49 @@
   (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
 (use-package forge)
+
+;; Org Mode
+
+(use-package org
+  :config
+  (setq org-ellipsis " ▾"
+	org-hide-emphasis-markers t)
+
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-log-done 'note)
+  (setq org-log-into-drawer t)
+  (setq org-clock-into-drawer "TRACKING"))
+
+(use-package org-bullets
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+(font-lock-add-keywords 'org-mode
+			'(("^ *\\([-]\\) "
+			    (0 (prog1 () (compose-region
+					(match-beginning 1)
+					(match-end 1) "•")))))) ;; Set faces for heading levels
+
+(dolist (face '((org-level-1 . 1.4)
+		(org-level-2 . 1.2)
+		(org-level-3 . 1.1)
+		(org-level-4 . 1.0)
+		(org-level-5 . 1.1)
+		(org-level-6 . 1.1)
+		(org-level-7 . 1.1)
+	        (org-level-8 . 1.1)))
+  (set-face-attribute (car face) nil
+		      :font "JetBrains Mono"
+		      :weight 'regular
+		      :height (cdr face)))
+
+(defun pk/org-mode-visual-fill ()
+  (setq visual-fill-column-width 100
+	visual-fill-column-center-text t)
+  (visual-fill-column-mode 1)
+  (auto-fill-mode 0)
+  (visual-line-mode 1))
+
+(use-package visual-fill-column
+  :hook (org-mode . pk/org-mode-visual-fill))
