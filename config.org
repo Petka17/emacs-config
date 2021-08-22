@@ -600,13 +600,26 @@
 *** Typescript/Javascript
 
     #+begin_src emacs-lisp
+      (use-package nvm
+	:defer t)
 
       (use-package typescript-mode
 	:mode "\\.tsx?\\'"
 	:hook (typescript-mode . lsp)
-	:config
-	(setq typescript-indent-level 2)
 	:bind (("C-x =" . lsp-eslint-fix-all)))
+
+      (use-package js2-mode
+	:mode "\\.jsx?\\'"
+	:hook (js2-mode . lsp)
+	:config
+	;; Use js2-mode for Node scripts
+	(add-to-list 'magic-mode-alist '("#!/usr/bin/env node" . js2-mode))
+
+	;; Don't use built-in syntax checking
+	(setq js2-mode-show-strict-warnings nil))
+
+      (use-package web-mode
+	:mode "\\.tsx?\\'")
 
     #+end_src
 

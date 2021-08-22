@@ -7,7 +7,8 @@ inspired by [System Crafters](https://odysee.com/@SystemCrafters) series
 1. [ ] Setup forge for working with GitHub
 1. [ ] Make window resize more friendly
 1. [ ] Setup eslint auto fix on save
-1. [ ] Setup LSP support for JS files
+1. [x] Setup LSP support for JS files
+1. [x] Setup LSP support for TSX files
 
 # References:
 
