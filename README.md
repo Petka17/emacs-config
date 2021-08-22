@@ -6,6 +6,8 @@ inspired by [System Crafters](https://odysee.com/@SystemCrafters) series
 
 1. [ ] Setup forge for working with GitHub
 1. [ ] Make window resize more friendly
+1. [ ] Setup eslint auto fix on save
+1. [ ] Setup LSP support for JS files
 
 # References:
 
@@ -23,4 +25,7 @@ inspired by [System Crafters](https://odysee.com/@SystemCrafters) series
 [Notes](https://systemcrafters.net/emacs-from-scratch/organize-your-life-with-org-mode/)
 1. [Emacs From Scratch #7 - Configure Everything with Org Babel](https://odysee.com/@SystemCrafters/emacs-from-scratch-7-configure)  
 [Notes](https://systemcrafters.net/emacs-from-scratch/configure-everything-with-org-babel/)
+1. [Emacs From Scratch #8 - Build Your Own IDE with lsp-mode](https://odysee.com/@SystemCrafters/emacs-from-scratch-8-build-your-own-ide)  
+[Notes](https://systemcrafters.net/emacs-from-scratch/build-your-own-ide-with-lsp-mode/)  
+Eslint auto fix didn't work...
 
