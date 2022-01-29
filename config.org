@@ -45,7 +45,13 @@
            `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
    #+end_src
+** GCC
+   #+begin_src emacs-lisp
 
+     (setq gc-cons-threshold 100000000)
+     (setq read-process-output-max (* 1024 1024)) ;; 1mb
+
+   #+end_src
 * Look and feel
 ** Basic setup
    Turn off unneeded elements to make Emacs look a lot more minimal and modern. Keep menu bar for a while, to learn some keybinding.
@@ -673,7 +679,7 @@
         (setq lsp-eslint-enable t)
         (setq lsp-eslint-format t)
         (setq lsp-eslint-auto-fix-on-save t)
-        (setq lsp-file-watch-ignored-directories (rx (or "node_modules" ".cache" ".log")))
+        (setq lsp-lens-mode nil)
         :config
         (lsp-enable-which-key-integration t))
 
@@ -812,4 +818,5 @@
 
     #+end_src
 
+    
     
